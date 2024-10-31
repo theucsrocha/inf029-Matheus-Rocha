@@ -283,7 +283,31 @@ void listarAlunoPorIdade(Aluno listaAluno[], int qtdAluno) {
         }
     }
 }
-
+void DetalharDisciplinaEAlunosMatriculados(Disciplina listaDisciplina[], int qtdDisciplina,Aluno listaAluno[],int qtdAluno){
+    int BuscaDiciplina;
+    int achou = 0;
+    printf("Digite o código da Disciplina:");
+    scanf("%d",&BuscaDiciplina);
+    for(int i = 0;i < qtdDisciplina; i++){
+        if (BuscaDiciplina == listaDisciplina[i].codigo){
+            achou = 1;
+            printf("Nome: %s \n",listaDisciplina[i].nome);
+            printf("------------------------Alunos---------------------------");
+            for(int j = 0; j < listaDisciplina[i].qtdAlunosNaDisciplina;j++){
+                for(int k = 0;k < qtdAluno;k++){
+                    if(listaDisciplina[i].alunos[j] == listaAluno[k].matricula){
+                        printf("%s, Matrícula: %d \n",listaAluno[k].nome,listaAluno[k].matricula);
+                    }
+                }
+            }
+        }
+    }
+    if (achou == 0){
+        printf("Diciplina não encontrada");
+    }
+    
+    
+}
 int atualizarAluno(Aluno listaAluno[], int qtdAluno){
     printf("Atualizar Aluno\n");
     printf("Digite a matrícula: ");
@@ -785,7 +809,7 @@ void cadastrarAlunoNaDiciplina(Aluno listaAluno[], Disciplina listaDisciplina[],
     }
     else if(achou == 1){
         achou = 0;
-        printf("Digite o nome do aluno que deseja cadastrar: ");
+        printf("Digite a matrícula aluno que deseja cadastrar: ");
         getchar();
         fgets(BuscaAluno,30,stdin);
         for (int i = 0; i < qtdAluno; i++){
@@ -852,9 +876,9 @@ int menuRelatorioAluno(){
     scanf("%d",&opcao);
     return opcao;
 }
-void ListarAlunosComMaisDe3Disciplinas(Aluno listaAluno[],int qtdAluno){
+void ListarAlunosComMenosDe3Disciplinas(Aluno listaAluno[],int qtdAluno){
     for(int i = 0; i < qtdAluno; i++){
-        if(listaAluno[i].NumeroDeDisciplinas > 3){
+        if(listaAluno[i].NumeroDeDisciplinas < 3){
             printf("Nome: %s\n Matricula %d\n", listaAluno[i].nome,listaAluno[i].matricula);
         }
     }
@@ -992,8 +1016,9 @@ void AniversariantesDoMes(Aluno listaAluno[],int qtdAluno,Professor listaProfess
 
 int main() {
     setlocale(LC_ALL, "Portuguese");
+    void DetalharDisciplinaEAlunosMatriculados(Disciplina listaDisciplina[], int qtdDisciplina,Aluno listaAluno[],int qtdAluno);
     void ListarMateriasComMaisDeQuarentaAlunos(Disciplina listaDisciplina[],int qtdDisciplina, Professor listaProfessor[], int qtdProfessor);
-    void ListarAlunosComMaisDe3Disciplinas(Aluno listaAluno[],int qtdAluno);
+    void ListarAlunosComMenosDe3Disciplinas(Aluno listaAluno[],int qtdAluno);
     Aluno listaAluno[TAM_ALUNO] = {0}; // Inicializar a lista de alunos
     Professor listaProfessor[TAM_PROFESSOR] = {0}; // Inicializar a lista de professores
     Disciplina listaDisciplina[TAM_DISCIPLINA] = {0}; // Inicializar a lista de disciplinas
@@ -1191,7 +1216,7 @@ int main() {
                                     }
                                     case 4:{
                                     printf("Listar Alunos com menos de 3 Matérias\n");
-                                        ListarAlunosComMaisDe3Disciplinas(listaAluno,qtdAluno);
+                                        ListarAlunosComMenosDe3Disciplinas(listaAluno,qtdAluno);
                                     break;
                                     }
                                     default: {
@@ -1242,7 +1267,8 @@ int main() {
                                     break;
                                     }
                                     case 1: {
-                                    printf("Detalhar Disciplina(lista de a1lunos inclusa)");
+                                    printf("Detalhar Disciplina(lista de alunos inclusa)");
+                                    DetalharDisciplinaEAlunosMatriculados(listaDisciplina,qtdDisciplina,listaAluno,qtdAluno);
                                     break;
                                     }
                                     case 2: {
