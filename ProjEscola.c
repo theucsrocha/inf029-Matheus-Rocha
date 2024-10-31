@@ -284,15 +284,16 @@ void listarAlunoPorIdade(Aluno listaAluno[], int qtdAluno) {
     }
 }
 void DetalharDisciplinaEAlunosMatriculados(Disciplina listaDisciplina[], int qtdDisciplina,Aluno listaAluno[],int qtdAluno){
-    int BuscaDiciplina;
+    char BuscaDiciplina[6];
     int achou = 0;
     printf("Digite o código da Disciplina:");
-    scanf("%d",&BuscaDiciplina);
+    getchar();
+    fgets(BuscaDiciplina,6,stdin);
     for(int i = 0;i < qtdDisciplina; i++){
-        if (BuscaDiciplina == listaDisciplina[i].codigo){
+        if (strcmp (BuscaDiciplina,listaDisciplina[i].codigo)){
             achou = 1;
             printf("Nome: %s \n",listaDisciplina[i].nome);
-            printf("------------------------Alunos---------------------------");
+            printf("------------------------Alunos--------------------------- \n");
             for(int j = 0; j < listaDisciplina[i].qtdAlunosNaDisciplina;j++){
                 for(int k = 0;k < qtdAluno;k++){
                     if(listaDisciplina[i].alunos[j] == listaAluno[k].matricula){
