@@ -286,7 +286,7 @@ void listarAlunoPorIdade(Aluno listaAluno[], int qtdAluno) {
 void DetalharDisciplinaEAlunosMatriculados(Disciplina listaDisciplina[], int qtdDisciplina,Aluno listaAluno[],int qtdAluno){
     char BuscaDiciplina[6];
     int achou = 0;
-    printf("Digite o código da Disciplina:");
+    printf(" \n Digite o código da Disciplina:");
     getchar();
     fgets(BuscaDiciplina,6,stdin);
     for(int i = 0;i < qtdDisciplina; i++){
@@ -296,6 +296,7 @@ void DetalharDisciplinaEAlunosMatriculados(Disciplina listaDisciplina[], int qtd
             printf("------------------------Alunos--------------------------- \n");
             for(int j = 0; j < listaDisciplina[i].qtdAlunosNaDisciplina;j++){
                 for(int k = 0;k < qtdAluno;k++){
+                
                     if(listaDisciplina[i].alunos[j] == listaAluno[k].matricula){
                         printf("%s, Matrícula: %d \n",listaAluno[k].nome,listaAluno[k].matricula);
                     }
@@ -656,7 +657,7 @@ int cadastrarDisciplina(Disciplina listaDisciplina[], int qtdDisciplina){
         }*/
 
         printf("Digite o código da disciplina: ");
-        getchar();
+        
         fgets(listaDisciplina[qtdDisciplina].codigo, sizeof(listaDisciplina[qtdDisciplina].codigo), stdin);
         listaDisciplina[qtdDisciplina].codigo[strcspn(listaDisciplina[qtdDisciplina].codigo, "\n")] = '\0';
         /*
@@ -816,7 +817,7 @@ void cadastrarAlunoNaDiciplina(Aluno listaAluno[], Disciplina listaDisciplina[],
         for (int i = 0; i < qtdAluno; i++){
             if (strcmp(listaAluno[i].nome, BuscaAluno)){
                 achou = 1;
-                listaDisciplina[local].alunos[qtdAlunoNaDiciplina] = listaAluno[i].nome;
+                listaDisciplina[local].alunos[qtdAlunoNaDiciplina] = listaAluno[i].matricula;
                 listaDisciplina[local].qtdAlunosNaDisciplina += 1;
                 listaAluno[i].NumeroDeDisciplinas += 1;
                 break;
