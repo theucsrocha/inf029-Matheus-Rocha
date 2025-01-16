@@ -692,15 +692,33 @@ Rertono (int)
 
 */
 
+
+
+
 int modificarTamanhoEstruturaAuxiliar(int posicao, int novoTamanho)
-
 {
-
-
-
-    int retorno = 0;
-
-    return retorno;
+    
+    if(posicao > 10 || posicao < 1){
+        return POSICAO_INVALIDA;
+    }else if(VetorPrincipal[posicao-1] == NULL){
+        return SEM_ESTRUTURA_AUXILIAR;
+    }
+    else if (VetorPrincipal[posicao-1]->tam+ novoTamanho < 1){
+       return NOVO_TAMANHO_INVALIDO;
+    }
+    else{
+        VetorPrincipal[posicao-1] = realloc(VetorPrincipal[posicao-1],(VetorPrincipal[posicao-1]->tam+novoTamanho)*sizeof(int));
+    }
+    if(VetorPrincipal[posicao-1] == NULL){
+        return SEM_ESPACO_DE_MEMORIA;
+    }
+    else{
+        VetorPrincipal[posicao-1]->tam +=novoTamanho;
+        return SUCESSO;
+    }
+   
+    
+    
 
 }
 
@@ -727,18 +745,19 @@ Retorno (int)
 int getQuantidadeElementosEstruturaAuxiliar(int posicao)
 
 {
-
-
-
-    int retorno = 0;
-
-
-
-    return retorno;
+    if(posicao > 10 || posicao < 1){
+        return POSICAO_INVALIDA;
+    }else if(VetorPrincipal[posicao-1]== NULL){
+        return SEM_ESTRUTURA_AUXILIAR;
+}
+    else if(VetorPrincipal[posicao-1]->qtdElementos == 0){
+        return ESTRUTURA_AUXILIAR_VAZIA;
+    }
+    else{
+        return VetorPrincipal[posicao-1]->qtdElementos;
+    }
 
 }
-
-
 
 /*
 
