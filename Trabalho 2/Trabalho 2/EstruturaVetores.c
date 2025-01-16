@@ -340,11 +340,8 @@ int excluirNumeroEspecificoDeEstrutura(int posicao, int valor)
 
                     VetorPrincipal[posicao-1]->elementos[j] = VetorPrincipal[posicao-1]->elementos[j + 1];
 
-                    VetorPrincipal[posicao-1]->qtdElementos -= 1;
-
-                   
-
                 }
+                VetorPrincipal[posicao-1]->qtdElementos -= 1;
 
             }
 
@@ -542,13 +539,15 @@ int getDadosDeTodasEstruturasAuxiliares(int vetorAux[])
 
             contador++;
 
-        }else if(VetorPrincipal[i]->qtdElementos ==0 ){
+        }else if(VetorPrincipal[i]->qtdElementos == 0 ){
 
             contador++;
 
         }
 
-    }if(contador == 10){
+    }
+    printf("Contador %d", contador);
+    if(contador == 10){
 
         return TODAS_ESTRUTURAS_AUXILIARES_VAZIAS;
 
