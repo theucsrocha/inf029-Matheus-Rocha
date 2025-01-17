@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "EstruturaVetores.h"
-#include "EstruturaVetores.c"
+#include "MatheusRocha20241160018.h"
+#include "MatheusRocha20241160018.c"
 
 void show_log(char *str);
 
