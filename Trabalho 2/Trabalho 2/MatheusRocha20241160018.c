@@ -348,18 +348,24 @@ int modificarTamanhoEstruturaAuxiliar(int posicao, int novoTamanho)
 {
     if (posicao > 10 || posicao < 1) {
         return POSICAO_INVALIDA;
-    } else if (VetorPrincipal[posicao-1] == NULL) {
+    } else if (VetorPrincipal[posicao - 1] == NULL) {
         return SEM_ESTRUTURA_AUXILIAR;
-    } else if (VetorPrincipal[posicao-1]->tam + novoTamanho < 1) {
+    } else if (VetorPrincipal[posicao - 1]->tam + novoTamanho < 1) {
         return NOVO_TAMANHO_INVALIDO;
     } else {
-        int novoTam = VetorPrincipal[posicao-1]->tam + novoTamanho;  // Corrigido o índice aqui
-        int* novaEstrutura = realloc(VetorPrincipal[posicao-1]->elementos, novoTam * sizeof(int));  // Ajustando também o ponteiro de elementos
+        int novoTam = VetorPrincipal[posicao - 1]->tam + novoTamanho;
+        int *novaEstrutura = realloc(VetorPrincipal[posicao - 1]->elementos, novoTam * sizeof(int));
         if (novaEstrutura == NULL) {
             return SEM_ESPACO_DE_MEMORIA;
         } else {
-            VetorPrincipal[posicao-1]->elementos = novaEstrutura;  // Atribuindo o novo ponteiro à estrutura
-            VetorPrincipal[posicao-1]->tam = novoTam;  // Atualizando o tamanho da estrutura
+            VetorPrincipal[posicao - 1]->elementos = novaEstrutura;
+            VetorPrincipal[posicao - 1]->tam = novoTam;
+
+            // Ajusta a quantidade de elementos, caso o novo tamanho seja menor.
+            if (VetorPrincipal[posicao - 1]->qtdElementos > novoTam) {
+                VetorPrincipal[posicao - 1]->qtdElementos = novoTam;
+            }
+
             return SUCESSO;
         }
     }
