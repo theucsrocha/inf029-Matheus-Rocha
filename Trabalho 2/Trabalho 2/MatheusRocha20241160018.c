@@ -499,6 +499,11 @@ void inicializar()
     for(int i = 0; i<10;i++){
         VetorPrincipal[i] = NULL;
     }
+    FILE *arquivo = fopen("Dados.txt","W");
+
+    if(arquivo == NULL){
+        printf("Erro na criação do arquivo");
+    }
    
 }
 
@@ -510,6 +515,21 @@ para poder liberar todos os espaços de memória das estruturas auxiliares.
 
 void finalizar()
 {
+    for(int i = 0;i < 10;i++){
+        if(VetorPrincipal[i] != NULL){
+            fprintf(arquivo,"%d",i);
+            fprintf(arquivo,"%d",VetorPrincipal[i]->tam);
+            fprintf(arquivo,"%d",VetorPrincipal[i]->qtdElementos);
+            for (int j = 0; i < VetorPrincipal[i]->qtdElementos;j++)
+            {
+                fprintf(arquivo,"%d",VetorPrincipal[i]->elementos[j]);
+            }
+                fprintf(arquivo,"\n");
+            
+        }
+    }
+    fclose(arquivo);
+    
   for(int i = 0; i < 10;i++){
     if(VetorPrincipal[i] != NULL){
         free(VetorPrincipal[i]->elementos);

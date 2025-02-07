@@ -20,6 +20,7 @@ typedef struct Auxiliar
     int qtdElementos;
 }Auxiliar;
  Auxiliar *VetorPrincipal[10];
+ FILE *arquivo;
 int criarEstruturaAuxiliar(int posicao, int tamanho);
 int inserirNumeroEmEstrutura(int posicao, int valor);
 int excluirNumeroDoFinaldaEstrutura(int posicao);

@@ -1,0 +1,125 @@
+[33mcommit e0df21320632eb6ea1ffd12c8cb4ad2e03742503[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Wed Jan 22 22:37:48 2025 -0300
+
+    Update MatheusRocha20241160018.c
+
+[33mcommit a24f4546733d0a65d28a7ce75adaff8aae9e5f84[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Fri Jan 17 17:15:08 2025 -0300
+
+    Update mainTeste.c
+
+[33mcommit 4dd8b45229114f032ab31de0b89a7f16ac1f43cf[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Fri Jan 17 17:14:47 2025 -0300
+
+    Update mainTeste.c
+
+[33mcommit 5c13798aa334b480cf638a94d8a956a8154a940f[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Fri Jan 17 17:14:30 2025 -0300
+
+    Rename EstruturaVetores.h to MatheusRocha20241160018.h
+
+[33mcommit b0780e9d27a1f4973544bbe3e2f19b21199942a3[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Fri Jan 17 17:14:16 2025 -0300
+
+    Update and rename EstruturaVetores.c to MatheusRocha20241160018.c
+
+[33mcommit 041a46b93970583c1c783955c42898341e3ea11a[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Fri Jan 17 17:13:29 2025 -0300
+
+    Update EstruturaVetores.c
+
+[33mcommit 0b15543cf154b154ea3c0e1371c44eab9b9da82a[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Wed Jan 15 21:25:58 2025 -0300
+
+    Update EstruturaVetores.c
+
+[33mcommit 7a6361a177d03810fa231ad989dca1c7bbcdce3a[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Wed Jan 15 21:07:20 2025 -0300
+
+    Update EstruturaVetores.c
+
+[33mcommit b7086daf8f46f485e52707973c1345bc51cbb39f[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Wed Jan 15 20:47:26 2025 -0300
+
+    Update EstruturaVetores.c
+
+[33mcommit a3e711f259575aa3ad38793ed4906f5ef49448e1[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Mon Jan 6 21:41:45 2025 -0300
+
+    Update EstruturaVetores.c
+
+[33mcommit 13f92768ebcaee93d852400fbd2a6a2dc9c421e2[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Sun Jan 5 21:01:44 2025 -0300
+
+    Add files via upload
+
+[33mcommit 0c2cd665a7c7f2db0a8ca08703afed6b965c4079[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Sun Dec 1 00:48:27 2024 -0300
+
+    Create MatheusRocha20241160018.h
+
+[33mcommit e3ff83ef88a6ad762cd11da3c89e6e771640ab2e[m
+Author: Matheus Rocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Sun Dec 1 00:47:22 2024 -0300
+
+    Create corretor.c
+
+[33mcommit f86914e70fde7b43b825e87800fede8241355e56[m
+Author: theucsrocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Fri Nov 22 18:15:06 2024 -0300
+
+    Create MatheusRocha20241160018.c
+
+[33mcommit 92cb5a374dcaf9fc9c35006f2ccab57874c22f59[m
+Author: theucsrocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Fri Nov 1 21:58:48 2024 -0300
+
+    Update ProjEscola.c
+
+[33mcommit b12de70d7fb4082593234bec862e4a889ac96577[m
+Author: theucsrocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Thu Oct 31 20:15:35 2024 -0300
+
+    Update ProjEscola.c
+
+[33mcommit 9e756ffcf86914f97ee090bfa2cf3cbe2b128e13[m
+Author: theucsrocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Thu Oct 31 19:58:10 2024 -0300
+
+    Update ProjEscola.c
+
+[33mcommit b90fbe02e8c826db1e9763df10c0a8c998fd3525[m
+Author: theucsrocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Wed Oct 30 21:10:37 2024 -0300
+
+    Delete ProjetoEscola
+
+[33mcommit 9ff8207ad623f23d8d0d80dccea42b9202e6ffc6[m
+Author: theucsrocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Wed Oct 30 21:09:34 2024 -0300
+
+    Create ProjEscola.c
+
+[33mcommit f720f4a54524625f7622b2b5b4752d903e3a44ce[m
+Author: theucsrocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Wed Oct 30 21:01:44 2024 -0300
+
+    Create ProjetoEscola
+
+[33mcommit f13fd4562443d2a2aebe20355a91eeedec90a605[m
+Author: theucsrocha <163583390+theucsrocha@users.noreply.github.com>
+Date:   Wed Oct 30 21:00:51 2024 -0300
+
+    Initial commit
